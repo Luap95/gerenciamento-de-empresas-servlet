@@ -42,4 +42,8 @@ public class Banco {
 		Banco.idEmpresa.remove(id);
 	}
 
+	public Empresa busca(Integer id) {
+		return Banco.idEmpresa.get(id);
+	}
+
 }
