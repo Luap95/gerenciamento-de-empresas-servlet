@@ -20,6 +20,6 @@ public class ListaEmpresas implements Acao{
 		//chamando JSP
 		RequestDispatcher rd = request.getRequestDispatcher("/listaEmpresas.jsp");
 		request.setAttribute("empresas", empresas);
-		return "forward:formAlteraEmpresa.jsp";
+		return "forward:listaEmpresas.jsp";
 	}
 }

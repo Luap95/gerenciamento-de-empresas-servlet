@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.alura.gerenciador.modelo.Banco;
 
-public class RemoveEmpresa implements Acao{
+public class RemoveEmpresas implements Acao{
 	
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
