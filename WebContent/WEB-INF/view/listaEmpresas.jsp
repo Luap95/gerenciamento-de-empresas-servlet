@@ -12,7 +12,12 @@
 		<title>Java Standard Taglib</title>
 	</head>
 	<body>
-		Lista de empresas <br />
+		<c:import url="logout-parcial.jsp"/>
+		Usuario logado: ${usuario.login}
+		<br>
+		<br>
+		<br>
+		Lista de empresas <br/>
 		
 		<ul>
 			<c:forEach items="${empresas}" var="empresa">
