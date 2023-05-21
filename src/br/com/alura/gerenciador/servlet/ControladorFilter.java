@@ -20,23 +20,12 @@ import br.com.alura.gerenciador.acao.Acao;
 @WebFilter("/ControladorFilter")
 public class ControladorFilter implements Filter {
 
-    /**
-     * Default constructor. 
-     */
-    public ControladorFilter() {
-        // TODO Auto-generated constructor stub
-    }
+	@Override
+	public void init(FilterConfig filterConfig) throws ServletException {}
 
-	/**
-	 * @see Filter#destroy()
-	 */
-	public void destroy() {
-		// TODO Auto-generated method stub
-	}
-
-	/**
-	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
-	 */
+	@Override
+	public void destroy() {}
+	
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain) throws IOException, ServletException {
 		
 		HttpServletRequest request = (HttpServletRequest) servletRequest;
@@ -68,13 +57,6 @@ public class ControladorFilter implements Filter {
             response.sendRedirect(tipoEndereco[1]);
         }
         
-	}
-
-	/**
-	 * @see Filter#init(FilterConfig)
-	 */
-	public void init(FilterConfig fConfig) throws ServletException {
-		// TODO Auto-generated method stub
 	}
 
 }

@@ -11,24 +11,12 @@ import javax.servlet.annotation.WebFilter;
 
 @WebFilter("/entrada")
 public class MonitoramentoFilter implements Filter {
+	@Override
+	public void init(FilterConfig filterConfig) throws ServletException {}
 
-    /**
-     * Default constructor. 
-     */
-    public MonitoramentoFilter() {
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see Filter#destroy()
-	 */
-	public void destroy() {
-		// TODO Auto-generated method stub
-	}
-
-	/**
-	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
-	 */
+	@Override
+	public void destroy() {}
+   
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		
 		System.out.println("MonitoramentoFilter");
@@ -39,11 +27,6 @@ public class MonitoramentoFilter implements Filter {
 		System.out.println("Tempo de execução da acao " + acao + " -> " + (depois - antes));
 	}
 
-	/**
-	 * @see Filter#init(FilterConfig)
-	 */
-	public void init(FilterConfig fConfig) throws ServletException {
-		// TODO Auto-generated method stub
-	}
+
 
 }
